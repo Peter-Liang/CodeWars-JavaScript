@@ -1,5 +1,5 @@
 {
-  //"parser":"Babel-ESLint",
+  "parser": "babel-eslint",
   "globals": {},
   "env": {
     // I write for browser
@@ -10,7 +10,9 @@
   },
   // To give you an idea how to override rule options:
   "rules": {
-    // Tons of rules you can use, for example...
+    "no-console": 0,
+    "no-unused-vars": 1,
     "quotes": [1, "single"]
-  }
+  },
+  "extends": "eslint:recommended"
 }
