@@ -1,18 +1,18 @@
 {
-  "parser": "babel-eslint",
-  "globals": {},
-  "env": {
-    // I write for browser
-    "browser": false,
-    // in CommonJS
-    "node": true,
-    "es6": true,
-  },
-  // To give you an idea how to override rule options:
-  "rules": {
-    "no-console": 0,
-    "no-unused-vars": 1,
-    "quotes": [1, "single"]
-  },
-  "extends": "eslint:recommended"
+    "parser": "babel-eslint",
+    "globals": {},
+    "env": {
+        // I write for browser
+        "browser": false,
+        // in CommonJS
+        "node": true,
+        "es6": true,
+    },
+    // To give you an idea how to override rule options:
+    "rules": {
+        "no-console": 0,
+        "no-unused-vars": 1,
+        "quotes": [1, "single"]
+    },
+    "extends": "eslint:recommended"
 }
