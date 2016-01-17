@@ -1,5 +1,4 @@
 var nextBigger = require('../Solutions/Next_bigger_number_with_the_same_digits.js');
-console.log(nextBigger(5));
 
 describe('nextBigger', function() {
     var should = require('should');
