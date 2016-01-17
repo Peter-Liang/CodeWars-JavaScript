@@ -1,0 +1,14 @@
+#!/bin/bash
+
+title=$1
+filename="${title/ /_}"
+url=$2
+
+sourcefile="Solutions/$filename.js"
+echo '/**' >> $sourcefile
+echo " * $title" >> $sourcefile
+echo " * $url" >> $sourcefile
+echo ' */' >> $sourcefile
+
+testfile="test/$filename.test.js"
+echo "var test = require('$sourcefile')" >> $testfile
