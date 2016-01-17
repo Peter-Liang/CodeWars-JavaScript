@@ -15,4 +15,6 @@ echo "var test = require('../$sourcefile');" >> $testfile
 echo "require('should');" >> $testfile
 echo "" >> $testfile
 echo "describe('$title', function() {" >> $testfile
+echo "    it('should work', function() {" >> $testfile
+echo "    });" >> $testfile
 echo "});" >> $testfile
