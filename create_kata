@@ -11,4 +11,4 @@ echo " * $url" >> $sourcefile
 echo ' */' >> $sourcefile
 
 testfile="test/$filename.test.js"
-echo "var test = require('$sourcefile')" >> $testfile
+echo "var test = require('../$sourcefile;')" >> $testfile
