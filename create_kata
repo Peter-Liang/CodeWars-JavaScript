@@ -1,7 +1,7 @@
 #!/bin/bash
 
 title=$1
-filename="${title/ /_}"
+filename="${title// /_}"
 url=$2
 
 sourcefile="Solutions/$filename.js"

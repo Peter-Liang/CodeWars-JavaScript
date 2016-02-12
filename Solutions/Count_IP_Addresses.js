@@ -10,7 +10,7 @@ function ipsBetween(start, end) {
         factor = 1;
     for (var i = startArr.length - 1; i >= 0; i--, factor *= 256) {
         result += (endArr[i] - startArr[i]) * factor;
-    };
+    }
 
     return result;
 }
