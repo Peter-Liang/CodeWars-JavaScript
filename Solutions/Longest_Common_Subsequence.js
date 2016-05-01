@@ -16,14 +16,24 @@ function LCS(x, y) {
         return LCS(x.slice(0, -1), y.slice(0, -1)) + x.slice(-1);
     }
 
-    const result = [];
-    result.push(LCS(x, y.slice(0, -1)));
-    result.push(LCS(x, y.slice(1)));
-    result.push(LCS(x.slice(0, -1), y));
-    result.push(LCS(x.slice(1), y));
-
-    const l = result.reduce((p, v) => p.length > v.length ? p : v, '');
-    return l;
+    const table = [];
+    for (let r = 0; r < x.length; r++) {
+        const row = [];
+        table.push(row);
+        for (let c = 0; c < y.length; c++) {
+            let current = (r > 0 && table[r - 1][c]) || '';
+            const lastColumn = (c > 0 && table[r][c - 1]) || '';
+            if (current.length < lastColumn.length) {
+                current = lastColumn;
+            }
+            if (x[r] === y[c]) {
+                current = ((r > 0 && c > 0 && table[r - 1][c - 1]) || '') + x[r];
+            }
+            row.push(current);
+        }
+    }
+    return table.pop().pop();
 }
 
 console.log(LCS('anothertest', 'notatest'))
+console.log(LCS('finaltest', 'zzzfinallyzzz'))
